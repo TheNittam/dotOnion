@@ -1,0 +1,1 @@
+chrome.webRequest.onBeforeRequest.addListener(function(n){const o=new URL(n.url);var e;return 1==o.origin.endsWith(".onion")?e="https:"==o.protocol?"http://"+o.hostname+".ws"+o.pathname:o.origin+".ws"+o.pathname:console.log("Not a '.onion' domain\n"+n.url),{redirectUrl:e}},{urls:["<all_urls>"]},["blocking"]);
